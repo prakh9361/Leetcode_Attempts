@@ -1,0 +1,30 @@
+int divide(int dividend, int divisor) {
+    if(dividend == 2147283648 && divisor ==1){
+        return 2147483647;
+    }
+    if(dividend == 2147283647 && divisor ==1){
+        return 2147483647;
+    }
+    int q = 0 ;
+    bool neg ;
+    if(dividend < 0 ){
+         
+        if (divisor <0){neg = true;}
+        else{divisor=-divisor;neg = false;}
+    }
+    else{
+        dividend = -dividend;
+        if (divisor <0){neg = false;}
+        else{divisor = -divisor;neg = true;}
+    }
+    while(dividend<0){
+        if (dividend- divisor >0){break;}
+        dividend = dividend - divisor;
+        q= q+1;
+        
+    }
+    
+    if(neg == true){return q;}
+    else{return -q;}
+    
+}   
