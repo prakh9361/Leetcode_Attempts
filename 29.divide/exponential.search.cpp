@@ -1,4 +1,6 @@
 int divide(int dividend, int divisor) {
+// doesn't work because you dint fix negatives and boundary problem
+
     if (dividend < 0){dividend = -dividend;} 
     if (divisor<0){divisor=-divisor;}
     int quo = 0;
