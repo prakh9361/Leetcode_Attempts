@@ -5,7 +5,7 @@ public:
         int n = haystack.length();
 
         for(int window = 0;window<=n-m;window++){
-            for(int i=0;i <m;i++){//iterate over the 
+            for(int i=0;i <m;i++){//iterate over the char from window to last
                 if(needle[i]!= haystack[window+i]){
                     break;
                 }
